@@ -1,0 +1,37 @@
+/* estilos.css */
+.alerta {
+    opacity: 0;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    right: -30%;
+    /* Inicialmente fuera de la pantalla */
+    width: 30%;
+    transition: opacity 0.5s ease-in-out, right 0.5s ease-in-out;
+    /* Transición para opacity y right */
+    pointer-events: none;
+}
+
+.alerta.visible {
+    opacity: 1;
+    right: 0;
+    /* Dentro de la pantalla cuando se añade la clase visible */
+    pointer-events: auto;
+}
+
+.cerrar {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cerrar:hover {
+    color: black;
+}
